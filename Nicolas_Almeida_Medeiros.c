@@ -20,7 +20,18 @@ int main () {
     switch (quest)
     {
     case 'a':
-               
+        float a, b, c, seno;
+        
+        printf("Digite o Valor do cateto oposto: ");
+        scanf("%f", &b);
+        printf("Digite o valor do cateto adjacente: ");
+        scanf("%f", &c);
+        
+        a =  sqrt(pow(b, 2) + pow(c, 2));
+        seno = b / a;
+        
+        printf("Hipotenusa: %.3f\n", a);
+        printf("Seno: %.3f\n", seno);  
         break;
     
     case 'b':
