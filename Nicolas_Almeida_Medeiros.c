@@ -35,9 +35,24 @@ int main () {
         break;
     
     case 'b':
+        char nome[35];
+        int ano;
         
+        printf("Digite seu nome: ");
+        scanf("%s", &nome);
+        printf("Digite o ano do seu nascimento: ");
+        scanf("%d", &ano);
+        
+        
+        if ((ano % 4) == 0 && (ano % 100) == 0 && (ano % 400) == 0) {
+            printf("%s, %d e um ano bissexto", nome, ano);
+            return 0;
+        }
+        else {
+                printf("%s, %d nao e ano bissexto", nome, ano);
+                return 0;
+        }
         break;
-    
     
     default:
         printf("Opcao invalida");
